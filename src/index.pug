@@ -1,0 +1,82 @@
+doctype html
+html(lang="en")
+  head
+
+    include includes/_config.pug
+    include includes/_head.pug
+
+    meta(property="og:title" content=title)
+    title #{title}
+  body
+    #app.is-home
+
+    //-   include includes/_navbar.pug
+
+    header.l-header
+      .l-card
+        .title 日記
+        .month 9月
+        .c-card 
+        .bottom
+          .btn_add + 添加一篇
+          .gradient
+      .c-mood 
+        .mood_1
+          .c-desc 你今天過得如何？
+          ul.c-emotion 
+            li.disappointed 
+              img(src="img/emotion/disappointed.png")
+            li.sad
+              img(src="img/emotion/sad.png")
+            li.bored 
+              img(src="img/emotion/bored.png")
+            li.smile
+              img(src="img/emotion/smile.png")
+            li.happy
+              img(src="img/emotion/happy.png")
+        .mood_2 
+          .emo_photo 
+            img(src="img/emotion/disappointed.png")
+          .c-desc 記下你的感受
+          .emo_words
+            ul.words_1
+              li.words(tabindex='1') 開心
+              li.words(tabindex='2') 決心滿滿
+              li.words(tabindex='3') 自信
+              li.words(tabindex='4') 放鬆
+              li.words(tabindex='5') 愉悅
+              li.words(tabindex='6') 心煩意亂
+              li.words(tabindex='7') 擔憂
+              li.words(tabindex='8') 孤獨
+              li.words(tabindex='9') 悲傷
+              li.words(tabindex='10') 懊惱
+              li.words(tabindex='11') 惱怒
+            ul.words_2 
+              li.words(tabindex='12') 興奮
+              li.words(tabindex='13') 動力十足
+              li.words(tabindex='14') 自豪
+              li.words(tabindex='15') 滿足
+              li.words(tabindex='16') 覺察
+              li.words(tabindex='17') 平靜
+              li.words(tabindex='18') 無聊
+              li.words(tabindex='19') 焦慮
+              li.words(tabindex='20') 悲觀
+              li.words(tabindex='21') 痛苦
+              li.words(tabindex='22') 生氣
+              li.words(tabindex='23') 辛酸
+            ul.words_3 
+              li.words(tabindex='24') 無所畏懼
+              li.words(tabindex='25') 熱情
+              li.words(tabindex='26') 感激
+              li.words(tabindex='27') 冷靜
+              li.words(tabindex='28') 充滿希望
+              li.words(tabindex='29') 不安
+              li.words(tabindex='30') 不知所措
+              li.words(tabindex='31') 沮喪
+              li.words(tabindex='32') 害怕
+              li.words(tabindex='33') 挫折
+              li.words(tabindex='34') 嫉妒
+
+    //-   include includes/_footer.pug    
+
+    include includes/_scripts.pug

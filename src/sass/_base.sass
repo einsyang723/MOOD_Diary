@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;900&family=Roboto:wght@700;900&display=swap')
+
+$color-primary: #35858B
+$color-secondary: #fce762
+$color-gray: #EDEDED
+$color-gray80: rgba($color-gray, 0.8)
+$color-gray-mid: #9b9b9b
+$color-gray-light: #f7f7f7
+$color-white: #fff
+$color-pink: #ffddd2
+
+$font-primary: 'Noto Sans TC', '微軟正黑體', sans-serif
+$font-en: 'Roboto','Arial', sans-serif
+
+=size($w, $h:$w)
+  width: $w
+  height: $h
+
+*
+  position: relative
+  -webkit-font-smoothing: antialiased
+  box-sizing: border-box
+
+// html
+//   overflow: -moz-hidden-unscrollable
+//   height: 100%
+
+// body::-webkit-scrollbar
+//   display: none
+
+// body
+//   -ms-overflow-style: none
+//   height: 100%
+//   width: calc(100vw + 18px)
+//   overflow: auto
+
+html
+  font-size: calc(16px * 10/ 16)
+  // 防止 Bootstrap 預設影響 GoTop
+  scroll-behavior: auto !important
+
+  //下兩行為想要設定scroll bar 一定要的程式碼
+  overflow: -moz-hidden-unscrollable
+  height: 100%
+
+  // @media (max-width: 1199.98px)
+  //   font-size: calc(15px * 10/ 16)
+  //   .l-card
+  //     +size(60%, 95vh)
+  //     border-radius: 10px 10px 0 0
+  //     .bottom
+  //       .gradient
+  //         width: 60%
+
+  // @media (min-width: 700px)
+  //   font-size: calc(14px * 10/ 16)
+  //   .l-card
+  //     +size(60%, 95vh)
+  //     border-radius: 10px 10px 0 0
+  //     .bottom
+  //       .gradient
+  //         width: 60%
+
+  // @media (max-width: 600px)
+  // .l-card
+  //   +size(100%, 100vh)
+  //   border-radius: 0
+  //   .bottom
+  //     .gradient
+  //       width: 100%
+
+body
+  margin: 0
+  background-color: $color-white
+  font-family: $font-primary
+  font-size: 1.6rem
+  font-weight: 400
+  letter-spacing: 0.1rem
+  line-height: 1.7
+  color: $color-white
+  transition: background-color 0.8s
+
+  //下四行為想要設定scroll bar 一定要的程式碼
+  -ms-overflow-style: none
+  height: 100%
+  width: calc(100vw + 18px)
+  overflow: auto
+  &.is-news-active
+    background-image: none
+    background-color: $color-primary
+  ::-webkit-scrollbar
+    display: none
+
+/* ----------------------------------- */
+/* ------ Reset ------ */
+/* ----------------------------------- */
+a
+  display: block
+  text-decoration: none
+  color: inherit
+  &:hover
+    color: inherit
+
+img
+  max-width: 100%
+
+ul
+  list-style: none
+  padding: 0
+  margin: 0
+
+/* ----------------------------------- */
+/* ------ Layouts ------ */
+/* ----------------------------------- */
+section
+  padding: 0 4vw
+.container
+  max-width: 1560px
+  // &.l-newproduct
+  //   display: flex
+  //   justify-content: center
+  //   align-items: center

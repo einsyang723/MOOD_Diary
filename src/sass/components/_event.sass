@@ -1,0 +1,116 @@
+.c-event
+  width: 60%
+  position: fixed
+  top: 0
+  color: #000
+  background-color: $color-white
+  opacity: 0.95
+  border-radius: 5px
+  z-index: 30
+  cursor: pointer
+  &.is-active
+    height: 100%
+
+.event_1
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  // font-weight: 900
+
+.event_2
+  display: none
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  overflow: hidden
+  &.down
+    display: flex
+    animation-name: MoveToBottom /*動畫名稱，需與 keyframe 名稱對應*/
+    animation-duration: 1s /*動畫持續時間，單位為秒*/
+    // animation-delay: 2s /*動畫延遲開始時間*/
+    animation-fill-mode: forwards
+    animation-timing-function: ease-in-out
+    // animation-iteration-count: infinite
+  &.up
+    display: flex
+    animation-name: MoveToTop /*動畫名稱，需與 keyframe 名稱對應*/
+    animation-duration: 1s /*動畫持續時間，單位為秒*/
+    // animation-delay: 2s /*動畫延遲開始時間*/
+    animation-fill-mode: forwards
+    animation-timing-function: ease-in-out
+    // animation-iteration-count: infinite
+
+@keyframes MoveToBottom
+  0%
+    height: 0
+    top: 50px
+  50%
+    height: 100%
+    bottom: -50px
+  100%
+    bottom: 0
+
+@keyframes MoveToTop
+  0%
+    height: 100%
+    bottom: 0
+  20%
+    bottom: -50px
+  100%
+    height: 0
+    // top: 50px
+
+.evnt_wrap
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+
+.event_desc
+  padding: 10px 0 5px 0
+  font-size: 20px
+
+.icon_down
+  padding-bottom: 10px
+  color: rgba($color-gray-mid, 0.8)
+  &:hover
+    color: $color-gray-mid
+
+.icon_up
+  color: rgba($color-gray-mid, 0.8)
+  padding: 5px 0 10px 0
+  &:hover
+    color: $color-gray-mid
+
+.group
+  width: 60%
+  display: flex
+  flex-direction: column
+  padding: 10px 20px
+  margin: 15px
+  border: 1px solid $color-gray-mid
+  border-radius: 10px
+  &:first-child
+    margin-top: 45px
+
+.g_li
+  width: 100%
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  margin: 2px
+  color: rgba(#000, 0.5)
+
+.g_title
+  font-size: 18px
+  margin-bottom: 10px
+  color: rgba(#000, 0.8)
+  pointer-events: none
+
+.g_inside
+  display: flex
+  justify-content: flex-end
+  // justify-content: center
+  // align-items: center
