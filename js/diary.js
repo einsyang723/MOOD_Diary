@@ -16,12 +16,14 @@ let arr_event = []
 let btn_finish = document.querySelector(".finish")
 let date = document.querySelector(".date")
 let time = document.querySelector(".time")
+let index = tmp_diary.length - 1
+var count = 0
 
 eventColor()
 getTime()
 
 // diary.addEventListener("change", () => {
-  
+
 // })
 
 btn_down.addEventListener("click", () => {
@@ -43,9 +45,33 @@ btn_up.addEventListener("click", () => {
 })
 
 btn_finish.addEventListener("click", () => {
-  console.log("finish")
   const a = diary.value
   console.log(a)
+  const icon_emo = localStorage.getItem('icon_emo')
+  const arr_words = localStorage.getItem('arr_words')
+  tmp_diary[index].icon_emo = icon_emo
+  tmp_diary[index].arr_words = arr_words
+  tmp_diary[index].date = date.textContent
+  tmp_diary[index].time = time.textContent
+  tmp_diary[index].arr_event = arr_event
+  tmp_diary[index].diary = a
+  index++
+  count = 1
+  tmp_diary.push({})
+  // tmp_diary.icon_emo = icon_emo
+  // tmp_diary.arr_words = arr_words
+  // tmp_diary.date = date.textContent
+  // tmp_diary.time = time.textContent
+  // tmp_diary.arr_event = arr_event
+  // tmp_diary.diary = a
+  console.log(tmp_diary[0]["date"])
+  console.log(tmp_diary[0]["icon_emo"])
+  console.log(JSON.stringify(tmp_diary))
+  // diary.value = JSON.stringify(tmp_diary)
+  localStorage.setItem('diary', JSON.stringify(tmp_diary))//(key,value)
+  // const diary_1 = JSON.parse(localStorage.getItem('diary'))
+  // console.log(diary_1[0]["date"])
+  window.location.assign("index.html")
 })
 
 function eventColor() {

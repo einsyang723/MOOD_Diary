@@ -97,7 +97,7 @@ section {
   color: #000;
   background-color: #EDEDED;
   border-radius: 10px 10px 0 0;
-  overflow: hidden;
+  overflow: scroll;
 }
 .l-card .title {
   position: sticky;
@@ -105,6 +105,10 @@ section {
 }
 .l-card .month {
   font-size: 20px;
+}
+.l-card .month:first-child {
+  font-size: 24px;
+  margin-bottom: 5px;
 }
 .l-card .bottom {
   display: -webkit-box;
@@ -177,6 +181,19 @@ section {
   border-radius: 10px;
   resize: none;
   z-index: 50;
+}
+.c-card_small {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 15px;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.emo_icon {
+  width: 50%;
 }
 
 .c-event {

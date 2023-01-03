@@ -14,6 +14,8 @@ let c3 = document.querySelector(".words_3").children
 let arr_words = []
 let c = [c1, c2, c3]
 
+let icon_emo = 0
+
 changeColor()
 
 btn_dis.addEventListener("click", () => {
@@ -27,23 +29,27 @@ btn_sad.addEventListener("click", () => {
   emoWords()
   emo_photo.innerHTML = '<img src="img/emotion/sad.png">'
   emo_words.scrollTo(120, 0)
+  icon_emo = 1
 })
 
 btn_bored.addEventListener("click", () => {
   emoWords()
   emo_photo.innerHTML = '<img src="img/emotion/bored.png">'
   emo_words.scrollTo(90, 0)
+  icon_emo = 2
 })
 
 btn_smile.addEventListener("click", () => {
   emoWords()
   emo_photo.innerHTML = '<img src="img/emotion/smile.png">'
   emo_words.scrollTo(50, 0)
+  icon_emo = 3
 })
 
 btn_happy.addEventListener("click", () => {
   emoWords()
   emo_photo.innerHTML = '<img src="img/emotion/happy.png">'
+  icon_emo = 4
 })
 
 function emoWords() {
